@@ -20,4 +20,8 @@ jobs:
         with:
           node-version: 20
 
-      - run: node -v
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run unit tests
+        run: npm test
