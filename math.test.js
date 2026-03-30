@@ -1,22 +1,18 @@
-const { sum, subtract } = require('./math');
+const { sum, subtract, division } = require('./math');
 const test = require("node:test");
 
 function describe(mathFunctions, param2) {
-    
+
+}
+
+function expect(subtract1) {
+
 }
 
 describe('Math functions', () => {
     test('sum adds two numbers correctly', () => {
-        function expect(sum1) {
-            
-        }
-
         expect(sum(1, 2)).toBe(3);
     });
-
-    function expect(subtract1) {
-        
-    }
 
     test('subtract works correctly', () => {
         expect(subtract(5, 3)).toBe(2);
@@ -24,5 +20,9 @@ describe('Math functions', () => {
 
     test('sum with negative numbers', () => {
         expect(sum(-1, -1)).toBe(-2);
+    });
+
+    test('division between a and b', () => {
+        expect(division(10, 5)).toBe(2);
     });
 });
