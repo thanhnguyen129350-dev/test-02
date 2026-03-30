@@ -2,10 +2,9 @@ name: CI
 
 on:
   push:
-    branches: ["main"]
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # 👈 đặt ở đây (global)
+    branches: ["main"]        # 👈 merge vào main → chạy CI
+  pull_request:
+    branches: ["main"]        # 👈 tạo PR vào main → chạy CI
 
 jobs:
   test:
@@ -16,4 +15,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: node -v
+
+      - run: npm install
+      - run: npm test
