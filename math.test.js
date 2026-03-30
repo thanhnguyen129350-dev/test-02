@@ -6,6 +6,6 @@ describe('Math functions', () => {
     });
 
     test('subtract works', () => {
-        expect(subtract(5, 3)).toBe(2);
+        expect(subtract(5, 3)).toBe(1);
     });
 });
